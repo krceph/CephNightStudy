@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="검색" href="search.html"/>
     <link rel="top" title="CephNightStudy 1.0.0 documentation" href="index.html"/>
-        <link rel="next" title="CEPH Archtecture" href="intro_to_ceph_architecture.html"/>
+        <link rel="next" title="Install CEPH" href="install_ceph.html"/>
         <link rel="prev" title="Welcome to Ceph Night Study&#39;s documentation!" href="index.html"/> 
 
   
@@ -93,9 +93,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Intro to CEPH</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro_to_ceph_architecture.html">CEPH Archtecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ceph-means">CEPH means?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#history-of-ceph">History of CEPH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-of-ceph">Architecture of CEPH</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install_ceph.html">Install CEPH</a></li>
 </ul>
 
             
@@ -161,11 +166,34 @@
             
   <div class="section" id="intro-to-ceph">
 <h1>Intro to CEPH<a class="headerlink" href="#intro-to-ceph" title="제목 주소">¶</a></h1>
-<p>CEPH란 무엇인가?</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro_to_ceph_architecture.html">CEPH Archtecture</a></li>
+<div class="section" id="ceph-means">
+<h2>CEPH means?<a class="headerlink" href="#ceph-means" title="제목 주소">¶</a></h2>
+<p>CEPH란 무엇일까?</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">free</span><span class="o">-</span><span class="n">software</span> <span class="n">storage</span> <span class="n">platform</span><span class="p">,</span> <span class="n">implements</span> <span class="nb">object</span> <span class="n">storage</span> <span class="n">on</span> <span class="n">a</span> <span class="n">single</span> <span class="n">distributed</span> <span class="n">compute</span> <span class="n">cluster</span><span class="p">,</span>
+<span class="ow">and</span> <span class="n">provides</span> <span class="n">interfaces</span> <span class="k">for</span> <span class="nb">object</span><span class="o">-</span><span class="p">,</span> <span class="n">block</span><span class="o">-</span> <span class="ow">and</span> <span class="n">file</span><span class="o">-</span><span class="n">level</span> <span class="n">storage</span><span class="o">.</span> <span class="p">(</span><span class="ow">in</span> <span class="n">Wikipedia</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>한 줄 요약해서, Open soure software distributed object, block and file supported storage라고 할 수 있다.</p>
+</div>
+<div class="section" id="history-of-ceph">
+<h2>History of CEPH<a class="headerlink" href="#history-of-ceph" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li>2004년 UCSC 대학의 Sage Weil의 프로젝트에서 시작</li>
+<li>어원 : cephalopods(두족류)  여러 개의 촉수가 있는 형상이 분산 파일 시스템에 적합한 상징성</li>
+<li>2006년 오픈소스화(LGPLv2)</li>
+<li>2014년 Inktank사가 Red Hat에 인수</li>
 </ul>
+<img alt="_images/history_ceph.png" src="_images/history_ceph.png" />
+</div>
+<div class="section" id="architecture-of-ceph">
+<h2>Architecture of CEPH<a class="headerlink" href="#architecture-of-ceph" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li>Object Storage : RadosGW를 통해 Restful API 제공</li>
+<li>Block Storage : RBD를 통해 일단 device처럼 mount가 가능</li>
+<li>File Storage : jewel 버전부터 stable하게 제공, POSIX 형식으로 file system 제공</li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -179,7 +207,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intro_to_ceph_architecture.html" class="btn btn-neutral float-right" title="CEPH Archtecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="install_ceph.html" class="btn btn-neutral float-right" title="Install CEPH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Welcome to Ceph Night Study&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

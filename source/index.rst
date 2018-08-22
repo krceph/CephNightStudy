@@ -4,13 +4,14 @@
    contain the root `toctree` directive.
 
 Welcome to Ceph Night Study's documentation!
-==========================================
+============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
    intro_to_ceph
+   install_ceph
 
 
 Indices and tables

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>검색 &mdash; CephNightStudy 1.0.0 documentation</title>
+  <title>Prerequisites &mdash; CephNightStudy 1.0.0 documentation</title>
   
 
   
@@ -34,8 +34,10 @@
   
         <link rel="index" title="색인"
               href="genindex.html"/>
-        <link rel="search" title="검색" href="#"/>
-    <link rel="top" title="CephNightStudy 1.0.0 documentation" href="index.html"/> 
+        <link rel="search" title="검색" href="search.html"/>
+    <link rel="top" title="CephNightStudy 1.0.0 documentation" href="index.html"/>
+        <link rel="up" title="Install CEPH" href="install_ceph.html"/>
+        <link rel="prev" title="Install CEPH" href="install_ceph.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -71,7 +73,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -89,9 +91,15 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro_to_ceph.html">Intro to CEPH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_ceph.html">Install CEPH</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="install_ceph.html">Install CEPH</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ceph-deploy-setup">ceph-deploy setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -136,10 +144,16 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li></li>
+          <li><a href="install_ceph.html">Install CEPH</a> &raquo;</li>
+        
+      <li>Prerequisites</li>
     
     
       <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install_ceph_prerequisites.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -151,19 +165,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="제목 주소">¶</a></h1>
+<p>CEPH 설치를 위한 사전 작업을 진행합니다.</p>
+<div class="section" id="ceph-deploy-setup">
+<h2>ceph-deploy setup<a class="headerlink" href="#ceph-deploy-setup" title="제목 주소">¶</a></h2>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>$ wget -q -O- &#39;https://download.ceph.com/keys/release.asc&#39; | sudo apt-key add -
+$ echo deb https://download.ceph.com/debian-{ceph-stable-release}/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
+$ sudo apt update
+$ sudo apt install ceph-deploy
+</pre></div>
+</div>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            <div class="articleComments">
@@ -171,6 +186,13 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="install_ceph.html" class="btn btn-neutral" title="Install CEPH" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -210,7 +232,6 @@
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="_static/translations.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -226,14 +247,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

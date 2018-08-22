@@ -1,5 +1,0 @@
-CEPH Archtecture
-================
-
-CEPH Architecture
-
